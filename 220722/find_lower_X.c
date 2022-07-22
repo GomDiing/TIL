@@ -36,26 +36,13 @@ int main() {
         scanf("%d", &arr[i]);
     }
     
-    /* 
-    for (int i = 0; i < n; i++) {
-        printf("%d", *(arr+i));
-    }
-    */
-    for (int i = 0; i< n; i++) {
-        if (arr[i] < x) {
-            cnt++;
-        }
-    }
-
-    int* least = (int*)malloc(sizeof(int) * cnt);
-
     for (int i = 0; i < n; i++) {
         if (arr[i] < x) {
-            least[pos++] = arr[i];
+            printf("%d ", arr[i]);
         }
     }
+    
+    free(arr);
 
-    for (int i = 0; i < cnt; i++) {
-        printf("%d ", least[i]);
-    }
+    return 0;
 }
